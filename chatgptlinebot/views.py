@@ -42,7 +42,7 @@ def route(event):
 
     data = {
         "model": "gpt-3.5-turbo",
-        "max_tokens": 200,
+        "max_tokens": 400,
         "messages": [
             {
                 "role": "system",
