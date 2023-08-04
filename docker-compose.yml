@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chatgpt-line-bot
+    ports:
+      - 8889:8000
+    volumes:
+      - .:/code
+    command: python manage.py runserver 0.0.0.0:8000
+    networks:
+      proxy:
+        ipv4_address: 172.33.0.4
+networks:
+  proxy:
+    ipam:
+      config:
+        - subnet: 172.33.0.0/24
