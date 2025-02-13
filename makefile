@@ -1,7 +1,7 @@
 .PHONY: logs
 
 NAME := chatgpt-line-bot
-SERVICES_PORT := 8889
+SERVICES_PORT := 8887
 
 up:
 	docker compose up -d

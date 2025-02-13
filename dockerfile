@@ -20,4 +20,4 @@ RUN pipenv install --system --deploy --ignore-pipfile
 COPY . /code/
 
 # 定義容器執行的預設指令
-CMD python manage.py runserver 0.0.0.0:8000
+ENTRYPOINT ["sh", "-c", "python manage.py runserver 0.0.0.0:8000"]

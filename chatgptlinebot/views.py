@@ -58,6 +58,7 @@ def route(event):
     if response.status_code == 200:
         reply_text(event, response.json()["choices"][0]["message"]["content"])
     else:
+        reply_text(event, "呼叫API時發生錯誤")
         print("呼叫API時發生錯誤：")
         print(response.json())
         return None
